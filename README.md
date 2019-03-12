@@ -96,7 +96,7 @@ Too long; didn't read
 
 If you're not paranoid about where the code is coming from, or just don't want to fuss with build environments, here's a link to the build that worked for us. It's a build we made straight from v37 walleth/walleth/main branch. This is verifiable, only difference is the code signature certificate it's signed with. 
 
-[PreBuilt WallEth-v37 APK](https://drive.google.com/open?id=1lHZW1-R6YrdsOrQJLHUz1yv9pfFe8b8b)
+[PreBuilt WallEth-v37 APK](https://github.com/mfsen10/walleth/blob/37-trezorbailout/assets/WALLETH-0.37-noGeth-noFirebase-forFDroid-online-release.apk)
 
 
 Bail out your coins!
@@ -114,7 +114,10 @@ Panhandling
 
 If I saved you some hairpulling and/or time, I'd gladly accept some coin in lieu of cash/check/money order/cigarette cartons:
 
-My Ethereum ETH-ONLY address: 0x4Ea515dDfc03D833fDC202393621A89AB77F1D87
+My Ethereum ETH-ONLY address: 
+
+**0x4Ea515dDfc03D833fDC202393621A89AB77F1D87**
+[![0x4Ea515dDfc03D833fDC202393621A89AB77F1D87](https://github.com/mfsen10/walleth/blob/37-trezorbailout/assets/eth-addr-qr.png)
 
 **Be sure to tip the WallEth folks**, they're listed as suggested reciever addresses within the app. 
 
