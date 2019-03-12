@@ -1,4 +1,5 @@
-Forked main v37 as a clear line of deprecation for Trezor firmware 1.6.1 ETH transaction signing support. 
+# ERC Wallet Recovery for Trezor 1.6.1
+Forked WallEth from main v37 only as a clear line of deprecation for Trezor firmware 1.6.1 ETH transaction signing support. 
 
 [TL;DR](#too-long-didnt-read) quick fix towards the bottom. 
 
@@ -83,10 +84,9 @@ NoGEth - NoFirebase - ForFDroid - OnlineRelase
  - [F-Droid](https://f-droid.org) (FOSS android app store, be sure to send Richard Stallman a coin donation when you recover!) is the only static variable in all the build flavors because at this stage of WallEth development, it was not ready for play store, and we shouldn't/wouldn't be able to sign the code for Play Store inclusion anyways.  
 
 
-Build Time!
-=======
+### Build Time!
 
-We're halfway out of the woods:
+We're about halfway out of the woods.
 
 - `Build` > `Generate Signed APK` 
 - Walk through the prompts.
@@ -121,7 +121,7 @@ Bail out your coins!
 Too long; didn't read
 =======
 
-If you're not paranoid about where the code is coming from, or just don't want to fuss with build environments, here's the exact APK build that worked for us. It's the one we compiled straight from v37 walleth/walleth/main branch with the process described above. This is verifiable, only difference is the code signature certificate it's signed with. Only reason I'm posting here is because [F-Droid](https://f-droid.org/en/packages/org.walleth/) repo doesn't go back into WallEth's pre-alpha days, and I don't feel like bothering the WallEth devs with this as I'm sure they have enough on their hands. 
+If you're not paranoid about where the code is coming from or just don't want to fuss with build environments, here's the exact APK build that worked for us. It's the one we compiled straight from v37 walleth/walleth/main branch with the process described above. This is verifiable, only difference is the code signature certificate it's signed with. Only reason I'm posting here is because [F-Droid](https://f-droid.org/en/packages/org.walleth/) repo doesn't go back into WallEth's alpha days, and I don't feel like bothering the WallEth devs with this as I'm sure they have enough on their hands. 
 
 [PreBuilt WallEth-v37 APK](https://github.com/mfsen10/walleth/blob/37-trezorbailout/assets/WALLETH-0.37-noGeth-noFirebase-forFDroid-online-release.apk)
 (right click download, or there's a download button on the linked page)
@@ -142,7 +142,7 @@ My Ethereum ETH-ONLY address, thanks in advance:
 
 
 
-Standard WallΞTH README follows.
+Standard WallΞTH README follows:
 =======
 
 [![on Google Play](https://ligi.de/img/play_badge.png)](https://play.google.com/store/apps/details?id=org.walleth)
