@@ -13,13 +13,15 @@ I recently bailed out a bunch of coin from a Trezor with the ill-fated firmware 
 - [Trezor Wallet](https://wallet.trezor.io)
 - [MetaMask](https://metamask.io/)
 
-and other common bridge tools were rendered useless for the purpose of extracting financial value from their trezor, had Trezor owners not performed their firmware update.
+and other common bridge tools were rendered useless for the purpose of extracting real money from  trezor <=1.6.3 firmwares, had Trezor customers not performed the firmware update. 
 
-A friend of mine found themself stuck in the middle of this, a carpenter contractor type whom often found himself away from home on business. Quietly HODLing away all he could, like any of our fellows desirous of the death of the centralized banking systems he decided a Trezor store was the best place for them. He needed to extract the coins to update the firmware, but so it seemed he also needed to update the firmware to extract the coin. Trezor support and gilded redditors offered some potential solutions
+A friend of mine found themself stuck in the middle of this, a carpenter contractor type whom often found himself away from home on business. Quietly HODLing away all he could, like any of our fellows desirous of the death of the centralized banking systems he decided a Trezor store was the best place for them. He needed to extract the coins to update the firmware, but so it seemed he also needed to update the firmware to extract the coin. Trezor support and gilded redditors offered some potential solutions:
 
 - [Vintage MyEtherWallet](https://vintage.myetherwallet.com), which also now fails to properly sign ETH transactions with the old Trezor firmware 1.6.1   
 - [MyEtherWallet](https://github.com/MyEtherWallet/MyEtherWallet) doing an even more vintage version local build/install, this seemed like a much more extensive project than I was willing to commit to
 - [python-trezor (trezorctl)](https://github.com/trezor/python-trezor) which is CLI-only and didn't seem to properly communicate with 1.6.1, perhaps an older build would but python has always been a [Dependency-Hell for me](https://xkcd.com/1987/)![/relevantXKCD](https://imgs.xkcd.com/comics/python_environment.png "The Python environmental protection agency wants to seal it in a cement chamber, with pictorial messages to future civilizations warning them about the danger of using sudo to install random Python packages")
+
+
 - [WallΞTH](https://github.com/walleth/walleth/) Fearing the worst with bugs in older versions potentially manhandling the wallets to oblivion, and also finding the latest version was no longer compatible with firmware 1.6.1, we started digging through the commit changelog hoping for clues, and fixed efforts around the release dates of the Trezor model 1 firmware 1.6.1 release. 
  
 
