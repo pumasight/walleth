@@ -20,12 +20,12 @@ A friend of mine found themself stuck in the middle of this, a carpenter contrac
 - [MyEtherWallet](https://github.com/MyEtherWallet/MyEtherWallet) doing an even more vintage version local build/install, this seemed like a much more extensive project than I was willing to commit to
 - [python-trezor (trezorctl)](https://github.com/trezor/python-trezor) which is CLI-only and didn't seem to properly communicate with 1.6.1, perhaps an older build would but python has always been dependency-hell for me.
 - [WallEth](https://github.com/walleth/walleth/) Fearing the worst with bugs in older versions potentially manhandling the wallets to oblivion, and also finding the latest version was no longer compatible with firmware 1.6.1, we started digging through the commit changelog hoping for clues, and fixed efforts around the release dates of the Trezor model 1 firmware 1.6.1 release. 
-
-To save anyone else out there with ERC20 wallets hopelessly stuck on an old Trezor firmware, I present to you... what worked for us. We gratefully stand on the shoulders of the Trezor and reddit communities and are happy to let you know there is a (probably time-sensitive) escape from your financial woes. 
+ 
 
 # Working Solution: [WallEth version 0.37](https://github.com/walleth/walleth/releases/tag/0.37) ❤ Trezor 1.6.1 
 -released 2018 Jun 13 (build flavor no-GEth No-Analytics -For-FDroid -OnlineRelease)
 
+To save anyone else out there with ERC20 wallets hopelessly stuck on an old Trezor firmware, I present to you... what worked for us. We gratefully stand on the shoulders of the Trezor and reddit communities and are happy to let you know there is a (probably time-sensitive) escape from your financial woes. Again, [TL;DR](#too-long-didnt-read) pre-built WallEth is below. 
 
 Build Environment 
 =======
