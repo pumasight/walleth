@@ -106,7 +106,7 @@ If the installation fails, check
  - Did you Build a SIGNED APK? It needs to be signed. 
  - Had enough? Head to the [TL;DR](#too-long-didnt-read)
 
-Once you're set with v37 WallEth installed, connect your Trezor to your android with USB OTG cable, or leverage a USB-Micro-Male/USB-C-Male to USB-A-female adapter. (adapter's male goes in the Android's port, the cable goes between the adapter and the trezor.)
+Once you're set with v37 WallEth installed, connect your Trezor to your android with USB ([OTG](https://shop.trezor.io/product/android-phone-cable) cable, or leverage an [OTG adapter](https://www.monoprice.com/Product?p_id=9724). (adapter's male goes in the Android's port, the generic cable goes between the adapter and the trezor.)
 
 WallEth should recognize your Trezor, allow pin unlock, view wallets, and the value stored on them. If it's not reading the known value of the wallets, you might have to try a different WallEth version. This walkthrough only describes how v37 worked with firmware 1.6.1 
 
