@@ -31,9 +31,11 @@ Bear with me as I am no more than an amateur developer, here we go:
 
 should work for whatever base platform, Windows/Linux/Mac, though YMMV. 
 
-I suggest simplifying the above installs by leveraging the Chocolatey![Chocolatey Logo](https://cdn.rawgit.com/chocolatey/choco/14a627932c78c8baaba6bef5f749ebfa1957d28d/docs/logo/chocolateyicon.gif "Chocolatey") platform. They have their simple installation methods posted there.
+I suggest simplifying the above installs by leveraging the Chocolatey platform. They have their simple installation methods posted there.
 
+![Chocolatey Logo](https://cdn.rawgit.com/chocolatey/choco/14a627932c78c8baaba6bef5f749ebfa1957d28d/docs/logo/chocolateyicon.gif "Chocolatey")
 
+[Chocolatey](https://chocolatey.org)
 
 Once choco is a thing on your machine,  complete the above installations with a one-liner:
 
