@@ -8,8 +8,8 @@ Backstory
 
 I recently bailed out a bunch of coin from a Trezor with the ill-fated firmware version 1.6.1. Best I can tell, Trezor forced a firmware update due to some fundamental changes in the cryptocurrency ecosystem and demands for support from their users, rendering the older firmwares incapable of properly signing Ethereum transactions. At some point between June 2018 and March 2019  
 - [MyEtherWallet](https://MyEtherWallet.com)
--[Trezor Wallet](https://wallet.trezor.io)
--[MetaMask](https://metamask.io/)
+- [Trezor Wallet](https://wallet.trezor.io)
+- [MetaMask](https://metamask.io/)
 and other common bridge tools were rendered useless for the purpose of extracting financial value from their trezor, had Trezor owners not performed their firmware update.
 
 A friend of mine found themself stuck in the middle of this, a carpenter contractor type whom often found himself away from home on business. Quietly HODLing away all he could, like any of our fellows desirous of the death of the centralized banking systems he decided a Trezor store was the best place for them. He needed to extract the coins to update the firmware, but so it seemed he also needed to update the firmware to extract the coin. Trezor support and gilded redditors offered some potential solutions
