@@ -1,4 +1,6 @@
-Forked main v37 as a clear line of deprecation for Trezor firmware 1.6.1 support. TL;DR quick fix towards the bottom. 
+Forked main v37 as a clear line of deprecation for Trezor firmware 1.6.1 support. 
+
+TL;DR quick fix towards the bottom. 
 
 Backstory 
 =======
@@ -22,32 +24,33 @@ Windows 10 10.0
 
 Bear with me as I am no more than an amateur developer, here we go:
 
-- Install Android Studio
-- Install Java RunTime Environment (JRE, traditional end-user Java)
-- Install Java SE (JDK)
+- Install
+ - Android Studio
+ - Java RunTime Environment (JRE, traditional end-user Java)
+ - Java SE (JDK)
 
 should work for whatever base platform, Windows/Linux/Mac, though YMMV. 
 
 Simplify the above installs by leveraging the https://Chocolatey.org platform. They have their simple installation methods posted there.
 
 Once choco is a thing on your machine,  complete the above installations with a one-liner:
-choco install -y androidstudio jdk8 jre8  
+```choco install -y androidstudio jdk8 jre8``` 
 
 - probably worth a reboot at this time just to start fresh, as environment variables get changed. 
 - Open android studio and follow the generic instruction for setup, where it will start pulling a bunch of base frameworks for building things in the latest version of android.
 - back to our task at hand - WallEth v0.37 is built on Oreo 8.0 (SDK 26) so we'll need to pull in that framework as well.
 
-File > Settings > System Settings > Android SDK > Check Android 8.0 and then 'apply'  
+`File` > `Settings` > `System Settings` > `Android SDK` > Check Android 8.0 and then `apply`  
 
 This gits that framework for building this Internet-ancient WallEth.
 
 - Download/git/ssh the version that worked for us.  (Walleth 0.37 from master branch worked for Trezor 1.6.1)
-https://github.com/walleth/walleth/releases/tag/0.37
+[WallEth tag 0.37](https://github.com/walleth/walleth/releases/tag/0.37
 
 - if you grabbed the zip/tar file, unzip/tar the archive somewhere that can host a couple Gig's worth of disk space - the build dependencies that get auto-downloaded by Studio in during compiling are sprawling. 
 
 - Back in android studio, 
-File > New > Import Project. 
+`File` > `New` > `Import Project` 
 
 Direct it towards the walleth-0.37 directory unzipped in the last step. Studio will start setting itself up to work with the codebase. 
 
@@ -57,36 +60,36 @@ Select the option for :
 
 NoGEth - NoFirebase - ForFDroid - OnlineRelase
 
-- GEth is an extension for Walleth that lets us run a full ETH node - awesome, but unncessary for this purpose. 
-- FireBase is Google's analytics platform, again unnecessary. 
-- We can't use the Offline version because it won't connect to the mainnet, where we need our blockchain ledger updates written so our coins actually go somewhere.
-- FDroid (FOSS android app store, be sure to send Richard Stallman a coin donation when you recover!) is the only static variable in all the build flavors because at this stage of WallEth development, it was not ready for play store, and we shouldn't/wouldn't be able to sign the code for Play Store inclusion anyways.  
+ - GEth is an extension for Walleth that lets us run a full ETH node - awesome, but unncessary for this purpose. 
+ - FireBase is Google's analytics platform, again unnecessary. 
+ - We can't use the Offline version because it won't connect to the mainnet, where we need our blockchain ledger updates written so our coins actually go somewhere.
+ - FDroid (FOSS android app store, be sure to send Richard Stallman a coin donation when you recover!) is the only static variable in all the build flavors because at this stage of WallEth development, it was not ready for play store, and we shouldn't/wouldn't be able to sign the code for Play Store inclusion anyways.  
 
 Build Time!
 =======
 
 We're halfway out of the woods:
 
-- Build > Generate Signed APK. 
+- `Build` > `Generate Signed APK` 
 - Walk through the prompts.
 - create a code signing signature for yourself, save it somewhere you can find it again, and set/remember the password (so you can use the same code sig if you have to go through multiple build processes to get happy.
 - Sign with the v2 method only, v1 is ancient and generally not required. If you're running an android version that requires this you shouldn't be messing with valuable data like crypto on that device and the WallEth app probably won't work.
 - Android Studio will try to convince you to install a 'latest APK bundle thingy' - no. don't need it for this, we're not publishing to Play Store.
 
-If today's a good day,  after a few minutes you'll get a toast message in the bottom-right that build completed. Click 'LOCATE' and your File Browser should open to the walleth-0.37 directory. There will be a directory name there matching the build flavor you'd selected, and inside is an APK. 
+If today's a good day, after a few minutes you'll get a toast message in the bottom-right that build completed. Click 'LOCATE' and your File Browser should open to the walleth-0.37 directory. There will be a directory name there matching the build flavor you'd selected, and inside is an APK. 
 
 Send that APK to your Android device, preferably one running Oreo 8.0 or 8.1. Use bluetooth, Google drive, USB cable, whatever. Open your File Manager of choice and find the APK, click to install. If prompted that 'for security, this app is prevented from installing other apps' then you'll need to allow that.
 
 If you have a WallEth version installed already, you're going to have to uninstall that first. If you've got a bunch of precious configuration data, perhaps leverage TitaniumBackup if you're rooted. otherwise, move your coins around to get them away from your existing WallEth install, because the current instance must be destroyed to get this v37 version running.
 
 If the installation fails, check
-- Did you tell Android System allow your File Manager app to install other apps?
-- Did you Build a SIGNED APK? It needs to be signed.
-- Did you back up and uninstall a currently installed WallEth instance?
+ - Did you tell Android System allow your File Manager app to install other apps?
+ - Did you Build a SIGNED APK? It needs to be signed.
+ - Did you back up and uninstall a currently installed WallEth instance?
 
-Once you're set with v37 WallEth installed, connect your trezor to your android with USB OTG cable, or leverage a USB-Micro-Male/USB-C-Male to USB-A-female adapter. (adapter's male goes in the Android's port, the cable goes between the adapter and the trezor.)
+Once you're set with v37 WallEth installed, connect your Trezor to your android with USB OTG cable, or leverage a USB-Micro-Male/USB-C-Male to USB-A-female adapter. (adapter's male goes in the Android's port, the cable goes between the adapter and the trezor.)
 
-WallEth should recognize your Trezor, allow pin unlock, view wallets, and the value stored on them.
+WallEth should recognize your Trezor, allow pin unlock, view wallets, and the value stored on them. If it's not reading the known value of the wallets, you might have to try a different WallEth version. This walkthrough only describes how v37 worked with firmware 1.6.1 
 
 Too long; didn't read
 =======
@@ -95,20 +98,26 @@ If you're not paranoid about where the code is coming from, or just don't want t
 
 https://drive.google.com/open?id=1lHZW1-R6YrdsOrQJLHUz1yv9pfFe8b8b
 
+
+Bail out your coins!
+=====
+
 - Send your coin to an address that's explicitly meant for that coin, and one you control! Binance, BitStamp, CoinBase are all decent intermediaries until you've got your Trezor updated to the latest firmware and ready to receive the transfers back onto it. 
 
 - I'd recommend sending VERY SMALL amounts of coin at first, as a few test cases, wait for the full node validation to complete, and move on from there. Even if all the software you're running is perfectly tuned, after all's said and done the Internets can corrupt or drop data transfers sometimes.
 
-- BE ABSOLUTELY SURE to uninstall version 37 or whatever other ancient alpha build you're working with once you've recovered your gear. It's strongly urged to keep up with the latest version for compatibility and security purposes. 
+- **BE SURE to uninstall version 37** or whatever other ancient alpha build you're working with once you've recovered your gear. It's strongly urged to keep up with the latest version for compatibility and security purposes. 
+
 
 Panhandling 
 =======
 
 If I saved you some hairpulling and/or time, I'd gladly accept some coin in lieu of cash/check/money order/cigarette cartons:
 
-ETHEREUM ETH-ONLY ADDRESS: 0x4Ea515dDfc03D833fDC202393621A89AB77F1D87
+My Ethereum ETH-ONLY address: 0x4Ea515dDfc03D833fDC202393621A89AB77F1D87
 
-Be sure to tip the WallEth folks, they're listed as suggested reciever addresses within the app. 
+**Be sure to tip the WallEth folks**, they're listed as suggested reciever addresses within the app. 
+
 
 Standard WallΞTH README below.
 =======
