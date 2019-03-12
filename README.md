@@ -120,10 +120,9 @@ Send that APK to your Android device, preferably one running Oreo 8.0 or 8.1. Us
 If you have a WallΞTH version installed already, you're going to have to uninstall that first. If you've got a bunch of precious WallΞTH configuration data, perhaps leverage [TitaniumBackup](https://www.titaniumtrack.com/titanium-backup.html) if you're running rooted Android. Otherwise, move your coins/wallets around to get them away from your existing WallΞTH install, because the current instance must be destroyed to get this v37 version running.
 
 If the installation fails, check
-- Did you tell Android System allow your File Manager app to install other apps?
-- Did you back up and uninstall a currently installed WallΞTH instance?
-- Did you Build a SIGNED APK? It needs to be signed. 
-- Had enough? Head to the [TL;DR](#too-long-didnt-read)
+- Did you tell `Android Settings` to allow your `File Manager` app to install other apps?
+- Did you back up your wallets and uninstall any current WallΞTH install?
+- Did you Build a SIGNED APK? It needs to be signed. Had enough? Head to the [TL;DR](#too-long-didnt-read)
 
 ### Connect
 Once you're set with v37 WallΞTH installed, connect your Trezor to your android with USB ([OTG](https://shop.trezor.io/product/android-phone-cable) cable, or leverage an [OTG adapter](https://www.monoprice.com/Product?p_id=9724). (adapter's male goes in the Android's port, the generic cable goes between the adapter and the trezor.)
