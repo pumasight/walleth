@@ -19,7 +19,7 @@ A friend of mine found themself stuck in the middle of this, a carpenter contrac
 
 - [Vintage MyEtherWallet](https://vintage.myetherwallet.com), which also now fails to properly sign ETH transactions with the old Trezor firmware 1.6.1   
 - [MyEtherWallet](https://github.com/MyEtherWallet/MyEtherWallet) doing an even more vintage version local build/install, this seemed like a much more extensive project than I was willing to commit to
-- [python-trezor (trezorctl)](https://github.com/trezor/python-trezor) which is CLI-only and didn't seem to properly communicate with 1.6.1, perhaps an older build would but python has always been dependency-hell for me.
+- [python-trezor (trezorctl)](https://github.com/trezor/python-trezor) which is CLI-only and didn't seem to properly communicate with 1.6.1, perhaps an older build would but python has always been a [Dependency-Hell for me](https://xkcd.com/1987/)![/relevantXKCD](https://imgs.xkcd.com/comics/python_environment.png "The Python environmental protection agency wants to seal it in a cement chamber, with pictorial messages to future civilizations warning them about the danger of using sudo to install random Python packages")
 - [WallΞTH](https://github.com/walleth/walleth/) Fearing the worst with bugs in older versions potentially manhandling the wallets to oblivion, and also finding the latest version was no longer compatible with firmware 1.6.1, we started digging through the commit changelog hoping for clues, and fixed efforts around the release dates of the Trezor model 1 firmware 1.6.1 release. 
  
 
