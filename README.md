@@ -4,7 +4,7 @@ I recently bailed out a bunch of coin from a Trezor with the ill-fated firmware 
 
 A friend of mine did just that. A carpenter contractor type whom often found himself away from home on business, quietly HODLing away all he could. Like any of our fellows desirous of the death of the centralized banking systems, he decided a Trezor store was the best place for them. Trezor support, however, was not as kind as we would have hoped, only offering some potential solutions such as vintage.myetherwallet.com, which also now fails to properly sign the transactions like their main app. He needed to extract the coins to update the firmware, but so it seemed he also needed to update the firmware to extract the coin.
 
-Thankfully, reddit threads proved helpful, with the golden average Internet citizen offering sincere help and direction, but much of it mirroring Trezor's lacklustre responses. Lots of focus on the trezorctl (python) project, and building MyEtherWallet locally, to no avail. To both Trezor and redditor's credit, they all had recommendations for WallEth. Fearing the worst with bugs in older versions potentially manhandling the wallets to oblivion, but also knowing the latest version was no longer compatible with firmware 1.6.1, we started digging through the commit changelog hoping for clues, and fixed around the point of Trezor 1.6.1's release. 
+Thankfully, reddit threads proved helpful, with the golden average Internet citizen offering sincere help and direction, but much of it mirroring Trezor's lacklustre responses. Lots of focus on the trezorctl (python) project, and building MyEtherWallet locally, to no avail. To both Trezor and redditor's credit, they all had recommendations for WallEth. Fearing the worst with bugs in older versions potentially manhandling the wallets to oblivion, but also knowing the latest version was no longer compatible with firmware 1.6.1, we started digging through the commit changelog hoping for clues, and fixed around the point of Trezor model 1 firmware 1.6.1 release. 
 
 To save anyone else out there with ERC20 wallets hopelessly stuck on an old Trezor firmware, I present to you --- what worked for us. We gratefully stand on the shoulders of the Trezor and reddit communities and are happy to let you know there is a (probably time-sensitive) escape from your financial woes. WallEth version 0.37 -released 20180613 -build flavor no-GEth No-Analytics -For-FDroid -OnlineRelease works!
 
@@ -75,7 +75,7 @@ Send that APK to your Android device, preferably one running Oreo 8.0 or 8.1. bl
 
 If you have a WallEth version installed already, you're going to have to uninstall that first. If you've got a bunch of precious configuration data, perhaps leverage TitaniumBackup if you're rooted. otherwise, move your coins around to get them away from your existing WallEth install, because the current instance must be destroyed to get this v37 version running.
 
-Once you're set with v37 WallEth installed, connect your trezor to your android with USB OTG cable, or leverage a Micro-Male or C-Male to USB-B-femal adapter. (adapter's male goes in the android port, your cable goes between the adapter and the trezor,)
+Once you're set with v37 WallEth installed, connect your trezor to your android with USB OTG cable, or leverage a Micro-Male or C-Male to USB-A-female adapter. (adapter's male goes in the Android's port, the cable goes between the adapter and the trezor.)
 
 
 WallEth should recognize your Trezor, allow pin unlock, view wallets, and the value stored on them.
@@ -92,7 +92,7 @@ I'd recommend sending VERY SMALL amounts of coin at first, as a few test cases, 
 BE ABSOLUTELY SURE to uninstall version 37 or whatever other ancient alpha build you're working with once you've recovered your gear. It's strongly urged to keep up with the latest version for compatibility and security purposes. 
 
 
-I'd be happy to collect whatever compensation you're willing to share for my troubles:
+If I saved you some hairpulling and/or time, I'd gladly accept some coin in lieu of cash/check/money order/cigarette cartons:
 
 ETHEREUM ETC ONLY ADDRESS: 0x4Ea515dDfc03D833fDC202393621A89AB77F1D87
 
