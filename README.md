@@ -35,7 +35,7 @@ Build Environment
 - JVM: OpenJDK 64-Bit Server VM by JetBrains s.r.o
 - Windows 10 10.0
 
-Bear with me as I am no more than an amateur developer, here we go:
+Target audience is pure beginner... here we go:
 
 ### Install
  - [Android Studio](https://developer.android.com/studio/)
@@ -46,7 +46,7 @@ Bear with me as I am no more than an amateur developer, here we go:
 
 ![Chocolatey Logo](https://cdn.rawgit.com/chocolatey/choco/14a627932c78c8baaba6bef5f749ebfa1957d28d/docs/logo/chocolateyicon.gif "Chocolatey")
 
-Automate the above installs on Windows by leveraging the [Chocolatey](https://chocolatey.org) platform. They have their simple installation methods posted there. This walkthrough describes Windows building. Should work for whatever base platform, Windows/Linux/Mac, but YMMV.
+Automate the above installs on Windows by leveraging the [Chocolatey](https://chocolatey.org/install) platform. They have their simple installation methods posted there. This walkthrough describes Windows building. Should work for whatever base platform, Windows/Linux/Mac, but YMMV.
 
 Once choco is a thing on your machine, complete the above installations with a one-liner:
 
@@ -82,11 +82,12 @@ Direct it towards the walleth-0.37 directory unzipped in the last step. Studio w
 
 - Wait for the initial Gradle Build to complete. 
 - on the  left-hand border of Studio there's a tab 'Build Versions' that presents a dropdown menu.
-- Select `NoGEth - NoFirebase - ForFDroid - OnlineRelease`
+- Select `NoGEth - NoFirebase - ForFDroid - Online -Release`
 
  - [Geth](https://github.com/ethereum/go-ethereum/wiki/Mining) is an extension for Walleth that lets us run a full ETH node - awesome, but unncessary for this purpose. 
  - [FireBase](https://developers.google.com/training/firebase/) is Google's analytics platform, again unnecessary. 
- - `Release` : We can't use the Debug version because it won't connect to the ETH mainnet, where we need our blockchain ledger updates written so our real coins go to real addresses.
+ - `Online`  because `offline` won't connect to the ETH mainnet, where we need our blockchain ledger updates written so our real coins go to real addresses
+ - `Release` : We don't need the Debug version, we're trying to run lean for this purpose alone.
  - [F-Droid](https://f-droid.org) is the only static variable in all the build flavors because at this stage of WallEth development, it was not ready for play store, and we shouldn't/wouldn't be able to sign the code for Play Store inclusion anyways. (FOSS android app store, be sure to send [Richard Stallman](https://my.fsf.org/donate) some coin once you recover yours! litecoin:LPttYC3GoXNrBqGfLT7tTbNHm8SiUpBwYz bitcoin:1PC9aZC4hNX2rmmrt7uHTfYAS3hRbph4UN)
 
 
@@ -94,17 +95,29 @@ Direct it towards the walleth-0.37 directory unzipped in the last step. Studio w
 
 We're about halfway out of the woods.
 
-- `Build` > `Generate Signed APK` 
-- Walk through the prompts.
-- create a code signing signature for yourself, save it somewhere you can find it again, and set/remember the password (so you can use the same code sig if you have to go through multiple build processes to get happy.
-- Sign with the v2 method only, v1 is ancient and generally not required. If you're running an android version that requires this you shouldn't be messing with valuable data like crypto on that device and the WallEth app probably won't work.
-- Android Studio will try to convince you to install a 'latest APK bundle thingy' - no. don't need it for this project, we're not publishing to Play Store.
+- `Build` > `Generate Signed Bundle APK` > 🔘`APK`   
+- Now create a code signing signature for yourself. Save the keystore to a path you can find it again, and set/remember the passwords (so you can use the same code sig if you have to repeat this.)
+- Select the build variant `noGethNoFirebaseForFDdroidOnlineRelease`
+- Sign with the v2 method only, v1 is ancient and not required. If you're running an android version that requires this for app installs, you shouldn't be messing with valuable data like crypto on that device and the WallEth app probably won't work.
 
-If today's a good day, after a few minutes you'll get a toast message in the bottom-right that build completed. Click 'LOCATE' and your File Browser should open to the walleth-0.37 directory. There will be a directory name there matching the build flavor you'd selected, and inside is an APK. 
+### It's building...
+- Cross your fingers. 
+- Android Studio might try to convince you to install their 'latest APK bundler' - `no`. Don't need it for this project, we're not publishing to Play Store.
 
+If today's a good day, after a few minutes you'll get a toast message 
+
+```
+Generate Signed APK
+				APK(s) generated successfully:
+				Module 'app': **locate** or analyze the APK.
+```
+
+in the bottom-right that build completed. Click 'LOCATE' and your File Browser should open to the walleth-0.37/app directory. There will be a directory name `noGethNoFirebaseForFDroidOnline` there matching the build flavor you'd selected to build. Inside is an APK. 
+
+### Install/Run
 Send that APK to your Android device, preferably one running Oreo 8.0 or 8.1. Use bluetooth, Google drive, USB cable, whatever. Open your File Manager of choice and find the APK, click to install. If prompted that 'for security, this app is prevented from installing other apps' then you'll need to allow that.
 
-If you have a WallEth version installed already, you're going to have to uninstall that first. If you've got a bunch of precious configuration data, perhaps leverage TitaniumBackup if you're rooted. otherwise, move your coins around to get them away from your existing WallEth install, because the current instance must be destroyed to get this v37 version running.
+If you have a WallEth version installed already, you're going to have to uninstall that first. If you've got a bunch of precious WallEth configuration data, perhaps leverage TitaniumBackup if you're rooted. otherwise, move your coins/wallets around to get them away from your existing WallEth install, because the current instance must be destroyed to get this v37 version running.
 
 If the installation fails, check
  - Did you tell Android System allow your File Manager app to install other apps?
@@ -128,7 +141,7 @@ Bail out your coins!
 Too long; didn't read
 =======
 
-If you're not paranoid about where executable software came from or just don't want to fuss with build environments, here's the exact APK build that worked for us. It's the one we compiled straight from v37 walleth/walleth/main branch with the process described above. This is verifiable, only difference is the code signature certificate it's signed with, which is not publicly verifiable. [F-Droid](https://f-droid.org/en/packages/org.walleth/) repo doesn't go back into WallEth's alpha days, and I don't feel like bothering the WallEth devs with this as I'm sure they have enough on their hands. Here you go. 
+If you're not paranoid about where your personal banking software executables are from, or just don't want to fuss with build environments, here's the exact APK build that worked for us. It's the one we compiled straight from v37 walleth/walleth/main branch with the process described above. The code is verifiable, but painful. Only difference is the code signature certificate it's signed with, which is **not** publicly verifiable. [F-Droid](https://f-droid.org/en/packages/org.walleth/) repo doesn't go back into WallEth's alpha days, and I don't feel like bothering the WallEth devs with this as I'm sure they have enough on their hands. Here you go. 
 
 [PreBuilt WallEth-v37 APK](https://github.com/mfsen10/walleth/blob/37-trezorbailout/assets/WALLETH-0.37-noGeth-noFirebase-forFDroid-online-release.apk)
 
