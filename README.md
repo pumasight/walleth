@@ -74,20 +74,20 @@ This gits the framework for building this Internet-ancient WallEth 37.
 
 - Back in android studio, 
 
-`File` > `New` > `Import Project` 
+`File` > `New` > `Import Project (gradle...)` 
 
 Direct it towards the walleth-0.37 directory unzipped in the last step. Studio will start setting itself up to work with the codebase. 
 
-- Once the initial sync is complete, we can build WallEth, but it has to be the right build flavor - on the very left-hand border of the Android Studio window you'll find a tab called 'Build Versions' that presents a dropdown menu.
+- Android Studio will recommend upgrding the Gradle install. I didn't, and since we're compiling legacy code, it's probably a bad idea. `Don't Remind me Again`
 
-Select the option for :
-
-NoGEth - NoFirebase - ForFDroid - OnlineRelase
+- Wait for the initial Gradle Build to complete. 
+- on the  left-hand border of Studio there's a tab 'Build Versions' that presents a dropdown menu.
+- Select `NoGEth - NoFirebase - ForFDroid - OnlineRelease`
 
  - [Geth](https://github.com/ethereum/go-ethereum/wiki/Mining) is an extension for Walleth that lets us run a full ETH node - awesome, but unncessary for this purpose. 
  - [FireBase](https://developers.google.com/training/firebase/) is Google's analytics platform, again unnecessary. 
- - We can't use the Offline version because it won't connect to the ETH mainnet, where we need our blockchain ledger updates written so our real coins go to real addresses.
- - [F-Droid](https://f-droid.org) (FOSS android app store, be sure to send Richard Stallman a coin donation when you recover!) is the only static variable in all the build flavors because at this stage of WallEth development, it was not ready for play store, and we shouldn't/wouldn't be able to sign the code for Play Store inclusion anyways.  
+ - `Release` : We can't use the Debug version because it won't connect to the ETH mainnet, where we need our blockchain ledger updates written so our real coins go to real addresses.
+ - [F-Droid](https://f-droid.org) is the only static variable in all the build flavors because at this stage of WallEth development, it was not ready for play store, and we shouldn't/wouldn't be able to sign the code for Play Store inclusion anyways. (FOSS android app store, be sure to send [Richard Stallman](https://my.fsf.org/donate) some coin once you recover yours! litecoin:LPttYC3GoXNrBqGfLT7tTbNHm8SiUpBwYz bitcoin:1PC9aZC4hNX2rmmrt7uHTfYAS3hRbph4UN)
 
 
 ### Build Time!
