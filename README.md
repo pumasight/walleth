@@ -1,4 +1,5 @@
-# ERC Wallet Recovery for Trezor 1.6.1
+# ERC Wallet Recovery for Trezor 1.6.1 via [WallEth](https://raw.githubusercontent.com/walleth/walleth/) [![WallETH](https://raw.githubusercontent.com/walleth/walleth/master/app/src/main/res/mipmap-xhdpi/ic_launcher.png)](https://walleth.org)
+
 Forked WallEth from main v37 only as a clear line of deprecation for Trezor firmware 1.6.1 ETH transaction signing support. 
 
 [TL;DR](#too-long-didnt-read) quick fix towards the bottom. 
