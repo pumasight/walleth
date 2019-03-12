@@ -119,7 +119,7 @@ in the bottom-right that build completed. Click `LOCATE` and your File Browser s
 ### Install
 Send that APK to your Android device, preferably one running Oreo 8.0 or 8.1. Use bluetooth, Google drive, USB cable, whatever. Open your File Manager of choice and find the APK, click to install. If prompted that 'for security, this app is prevented from installing other apps' then you'll need to allow that.
 
-If you have a WallEth version installed already, you're going to have to uninstall that first. If you've got a bunch of precious WallEth configuration data, perhaps leverage TitaniumBackup if you're rooted. otherwise, move your coins/wallets around to get them away from your existing WallEth install, because the current instance must be destroyed to get this v37 version running.
+If you have a WallEth version installed already, you're going to have to uninstall that first. If you've got a bunch of precious WallEth configuration data, perhaps leverage [TitaniumBackup](https://www.titaniumtrack.com/titanium-backup.html) if you're running rooted Android. Otherwise, move your coins/wallets around to get them away from your existing WallEth install, because the current instance must be destroyed to get this v37 version running.
 
 If the installation fails, check
  - Did you tell Android System allow your File Manager app to install other apps?
