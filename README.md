@@ -42,11 +42,7 @@ Target audience is pure beginner... here we go:
  - [Java RunTime Environment](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (JRE, traditional end-user Java)
  - [Java SE](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (JDK)
 
- 
-
-![Chocolatey Logo](https://cdn.rawgit.com/chocolatey/choco/14a627932c78c8baaba6bef5f749ebfa1957d28d/docs/logo/chocolateyicon.gif "Chocolatey")
-
-Automate the above installs on Windows by leveraging the [Chocolatey](https://chocolatey.org/install) platform. They have their simple installation methods posted there. This walkthrough describes Windows building. Should work for whatever base platform, Windows/Linux/Mac, but YMMV.
+You can automate the above installs on Windows by leveraging the lovely [Chocolatey](https://chocolatey.org/install)[![Chocolatey Logo](https://cdn.rawgit.com/chocolatey/choco/14a627932c78c8baaba6bef5f749ebfa1957d28d/docs/logo/chocolateyicon.gif "Chocolatey")](https://chocolatey.org/install) platform. They have their simple installation methods posted there. This walkthrough describes Windows building. Should work for whatever base platform, Windows/Linux/Mac, but YMMV.
 
 Once choco is a thing on your machine, complete the above installations with a one-liner:
 
