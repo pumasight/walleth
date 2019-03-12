@@ -1,7 +1,7 @@
 Forked main v37 as a clear line of deprecation for Trezor firmware 1.6.1 support. TL;DR quick fix towards the bottom. 
 
-=======
 Backstory 
+=======
 
 I recently bailed out a bunch of coin from a Trezor with the ill-fated firmware version 1.6.1. Best I can tell, Trezor forced a firmware update due to some fundamental changes in the cryptocurrency ecosystem and demands for support from their users, rendering the older firmwares incapable of properly signing Ethereum transactions. MyEtherWallet, wallet.trezor.io, and other common bridge tools were at some point between June 2018 and March 2019 rendered useless for the purpose of extracting financial value from their trezor, had they not performed the required update.
 
@@ -11,10 +11,10 @@ Thankfully, reddit threads proved helpful, with the golden average Internet citi
 
 To save anyone else out there with ERC20 wallets hopelessly stuck on an old Trezor firmware, I present to you --- what worked for us. We gratefully stand on the shoulders of the Trezor and reddit communities and are happy to let you know there is a (probably time-sensitive) escape from your financial woes. WallEth version 0.37 -released 20180613 -build flavor no-GEth No-Analytics -For-FDroid -OnlineRelease works!
 
-=======
 Bailout instructions 
-build environment:
+=======
 
+Build environment:
 Android Studio 3.3.2 Build #AI-182.5107.16.33.5314842, built on February 15, 2019
 JRE: 1.8.0_152-release-1248-b01 amd64
 JVM: OpenJDK 64-Bit Server VM by JetBrains s.r.o
@@ -34,17 +34,15 @@ Once choco is a thing on your machine,  complete the above installations with a 
 choco install -y androidstudio jdk8 jre8  
 
 - probably worth a reboot at this time just to start fresh, as environment variables get changed. 
-
 - Open android studio and follow the generic instruction for setup, where it will start pulling a bunch of base frameworks for building things in the latest version of android.
-
 - back to our task at hand - WallEth v0.37 is built on Oreo 8.0 (SDK 26) so we'll need to pull in that framework as well.
+
 File > Settings > System Settings > Android SDK > Check Android 8.0 and then 'apply'  
 
 This gits that framework for building this Internet-ancient WallEth.
 
 - Download/git/ssh the version that worked for us.  (Walleth 0.37 from master branch worked for Trezor 1.6.1)
 https://github.com/walleth/walleth/releases/tag/0.37
-
 
 - if you grabbed the zip/tar file, unzip/tar the archive somewhere that can host a couple Gig's worth of disk space - the build dependencies that get auto-downloaded by Studio in during compiling are sprawling. 
 
@@ -64,8 +62,8 @@ NoGEth - NoFirebase - ForFDroid - OnlineRelase
 - We can't use the Offline version because it won't connect to the mainnet, where we need our blockchain ledger updates written so our coins actually go somewhere.
 - FDroid (FOSS android app store, be sure to send Richard Stallman a coin donation when you recover!) is the only static variable in all the build flavors because at this stage of WallEth development, it was not ready for play store, and we shouldn't/wouldn't be able to sign the code for Play Store inclusion anyways.  
 
-=======
 Build Time!
+=======
 
 We're halfway out of the woods:
 
@@ -90,20 +88,21 @@ Once you're set with v37 WallEth installed, connect your trezor to your android 
 
 WallEth should recognize your Trezor, allow pin unlock, view wallets, and the value stored on them.
 
+Too long; didn't read
 =======
-Too long; didn't read: 
 
 If you're not paranoid about where the code is coming from, or just don't want to fuss with build environments, here's a link to the build that worked for us. It's a build we made straight from v37 walleth/walleth/main branch. This is verifiable, only difference is the code signature certificate it's signed with. 
 
 https://drive.google.com/open?id=1lHZW1-R6YrdsOrQJLHUz1yv9pfFe8b8b
 
+- Send your coin to an address that's explicitly meant for that coin, and one you control! Binance, BitStamp, CoinBase are all decent intermediaries until you've got your Trezor updated to the latest firmware and ready to receive the transfers back onto it. 
 
-Send your coin to an address that's explicitly meant for that coin, and one you control! Binance, BitStamp, CoinBase are all decent intermediaries until you've got your Trezor updated to the latest firmware and ready to receive the transfers back onto it. 
+- I'd recommend sending VERY SMALL amounts of coin at first, as a few test cases, wait for the full node validation to complete, and move on from there. Even if all the software you're running is perfectly tuned, after all's said and done the Internets can corrupt or drop data transfers sometimes.
 
-I'd recommend sending VERY SMALL amounts of coin at first, as a few test cases, wait for the full node validation to complete, and move on from there. Even if all the software you're running is perfectly tuned, after all's said and done the Internets can corrupt or drop data transfers sometimes.
+- BE ABSOLUTELY SURE to uninstall version 37 or whatever other ancient alpha build you're working with once you've recovered your gear. It's strongly urged to keep up with the latest version for compatibility and security purposes. 
 
-BE ABSOLUTELY SURE to uninstall version 37 or whatever other ancient alpha build you're working with once you've recovered your gear. It's strongly urged to keep up with the latest version for compatibility and security purposes. 
-
+Panhandling 
+=======
 
 If I saved you some hairpulling and/or time, I'd gladly accept some coin in lieu of cash/check/money order/cigarette cartons:
 
