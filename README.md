@@ -117,9 +117,10 @@ If I saved you some hairpulling and/or time, I'd gladly accept some coin in lieu
 My Ethereum ETH-ONLY address: 
 
 **0x4Ea515dDfc03D833fDC202393621A89AB77F1D87**
-[![0x4Ea515dDfc03D833fDC202393621A89AB77F1D87](https://github.com/mfsen10/walleth/blob/37-trezorbailout/assets/eth-addr-qr.png)
 
-**Be sure to tip the WallEth folks**, they're listed as suggested reciever addresses within the app. 
+[![TrezorBailout Walkthrough author's addess](https://github.com/mfsen10/walleth/blob/37-trezorbailout/assets/eth-addr-qr.png)
+
+**Be sure to tip the WallEth devs as well**, their addresses are listed within the app. 
 
 
 Standard WallΞTH README below.
