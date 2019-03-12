@@ -97,7 +97,7 @@ Too long; didn't read
 If you're not paranoid about where the code is coming from, or just don't want to fuss with build environments, here's a link to the build that worked for us. It's a build we made straight from v37 walleth/walleth/main branch. This is verifiable, only difference is the code signature certificate it's signed with. 
 
 [PreBuilt WallEth-v37 APK](https://github.com/mfsen10/walleth/blob/37-trezorbailout/assets/WALLETH-0.37-noGeth-noFirebase-forFDroid-online-release.apk)
-
+(right click download, or there's a download button on the linked page)
 
 Bail out your coins!
 =====
