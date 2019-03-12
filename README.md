@@ -30,10 +30,10 @@ Build Environment
 
 Bear with me as I am no more than an amateur developer, here we go:
 
-- Install
- - Android Studio
- - Java RunTime Environment (JRE, traditional end-user Java)
- - Java SE (JDK)
+### Install
+ - [Android Studio](https://developer.android.com/studio/)
+ - [Java RunTime Environment](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (JRE, traditional end-user Java)
+ - [Java SE](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (JDK)
 
 should work for whatever base platform, Windows/Linux/Mac, though YMMV. 
 
@@ -50,13 +50,16 @@ When you're done with the project, I'd recommend you remove all this as well.
 ```choco remove androidstudio jdk8 # jre8 # chocolatey``` 
 
 - probably worth a reboot at this time just to start fresh, as environment variables get changed. 
+
+### Prepare
 - Open android studio and follow the generic instruction for setup, where it will start pulling a bunch of base frameworks for building things in the latest version of android.
 - back to our task at hand - WallEth v0.37 is built on Oreo 8.0 (SDK 26) so we'll need to pull in that framework as well.
 
-`File` > `Settings` > `System Settings` > `Android SDK` > Check Android 8.0 and then `apply`  
+`File` > `Settings` > `System Settings` > `Android SDK` > ✔ `Android 8.0` and then `Apply`  
 
 This gits the framework for building this Internet-ancient WallEth 37.
 
+### Import & Configure
 - Download/git/ssh the version that worked for us.  (Walleth 0.37 from master branch worked for Trezor 1.6.1)
 [WallEth tag 0.37](https://github.com/walleth/walleth/releases/tag/0.37)
 
@@ -76,7 +79,7 @@ NoGEth - NoFirebase - ForFDroid - OnlineRelase
 
  - [Geth](https://github.com/ethereum/go-ethereum/wiki/Mining) is an extension for Walleth that lets us run a full ETH node - awesome, but unncessary for this purpose. 
  - [FireBase](https://developers.google.com/training/firebase/) is Google's analytics platform, again unnecessary. 
- - We can't use the Offline version because it won't connect to the mainnet, where we need our blockchain ledger updates written so our coins actually go somewhere.
+ - We can't use the Offline version because it won't connect to the ETH mainnet, where we need our blockchain ledger updates written so our real coins go to real addresses.
  - [F-Droid](https://f-droid.org) (FOSS android app store, be sure to send Richard Stallman a coin donation when you recover!) is the only static variable in all the build flavors because at this stage of WallEth development, it was not ready for play store, and we shouldn't/wouldn't be able to sign the code for Play Store inclusion anyways.  
 
 
