@@ -45,7 +45,7 @@ Once choco is a thing on your machine,  complete the above installations with a 
 This gits that framework for building this Internet-ancient WallEth.
 
 - Download/git/ssh the version that worked for us.  (Walleth 0.37 from master branch worked for Trezor 1.6.1)
-[WallEth tag 0.37](https://github.com/walleth/walleth/releases/tag/0.37
+[WallEth tag 0.37](https://github.com/walleth/walleth/releases/tag/0.37)
 
 - if you grabbed the zip/tar file, unzip/tar the archive somewhere that can host a couple Gig's worth of disk space - the build dependencies that get auto-downloaded by Studio in during compiling are sprawling. 
 
@@ -96,7 +96,7 @@ Too long; didn't read
 
 If you're not paranoid about where the code is coming from, or just don't want to fuss with build environments, here's a link to the build that worked for us. It's a build we made straight from v37 walleth/walleth/main branch. This is verifiable, only difference is the code signature certificate it's signed with. 
 
-https://drive.google.com/open?id=1lHZW1-R6YrdsOrQJLHUz1yv9pfFe8b8b
+[PreBuilt WallEth-v37 APK](https://drive.google.com/open?id=1lHZW1-R6YrdsOrQJLHUz1yv9pfFe8b8b)
 
 
 Bail out your coins!
