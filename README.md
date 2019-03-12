@@ -36,11 +36,11 @@ Bear with me as I am no more than an amateur developer, here we go:
  - [Java RunTime Environment](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (JRE, traditional end-user Java)
  - [Java SE](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (JDK)
 
-should work for whatever base platform, Windows/Linux/Mac, though YMMV. 
+ 
 
 ![Chocolatey Logo](https://cdn.rawgit.com/chocolatey/choco/14a627932c78c8baaba6bef5f749ebfa1957d28d/docs/logo/chocolateyicon.gif "Chocolatey")
 
-I suggest simplifying the above installs by leveraging the [Chocolatey](https://chocolatey.org) platform. They have their simple installation methods posted there.
+Automate the above installs on Windows by leveraging the [Chocolatey](https://chocolatey.org) platform. They have their simple installation methods posted there. This walkthrough describes Windows building. Should work for whatever base platform, Windows/Linux/Mac, but YMMV.
 
 Once choco is a thing on your machine, complete the above installations with a one-liner:
 
@@ -48,7 +48,7 @@ Once choco is a thing on your machine, complete the above installations with a o
 
 When you're done with the project, I'd recommend you remove all this as well.
 
-```choco remove androidstudio jdk8 # jre8 # chocolatey``` 
+```choco uninstall androidstudio jdk8 #chocolatey #jre8``` 
 
 - probably worth a reboot at this time just to start fresh, as environment variables get changed. 
 
@@ -102,8 +102,9 @@ If you have a WallEth version installed already, you're going to have to uninsta
 
 If the installation fails, check
  - Did you tell Android System allow your File Manager app to install other apps?
- - Did you Build a SIGNED APK? It needs to be signed.
  - Did you back up and uninstall a currently installed WallEth instance?
+ - Did you Build a SIGNED APK? It needs to be signed. 
+ - Had enough? Head to the [TL;DR](#too-long-didnt-read)
 
 Once you're set with v37 WallEth installed, connect your Trezor to your android with USB OTG cable, or leverage a USB-Micro-Male/USB-C-Male to USB-A-female adapter. (adapter's male goes in the Android's port, the cable goes between the adapter and the trezor.)
 
@@ -121,10 +122,10 @@ Bail out your coins!
 Too long; didn't read
 =======
 
-If you're not paranoid about where the code is coming from or just don't want to fuss with build environments, here's the exact APK build that worked for us. It's the one we compiled straight from v37 walleth/walleth/main branch with the process described above. This is verifiable, only difference is the code signature certificate it's signed with. Only reason I'm posting here is because [F-Droid](https://f-droid.org/en/packages/org.walleth/) repo doesn't go back into WallEth's alpha days, and I don't feel like bothering the WallEth devs with this as I'm sure they have enough on their hands. 
+If you're not paranoid about where the code is coming from or just don't want to fuss with build environments, here's the exact APK build that worked for us. It's the one we compiled straight from v37 walleth/walleth/main branch with the process described above. This is verifiable, only difference is the code signature certificate it's signed with. Only reason I'm posting the app build here is because [F-Droid](https://f-droid.org/en/packages/org.walleth/) repo doesn't go back into WallEth's alpha days, and I don't feel like bothering the WallEth devs with this as I'm sure they have enough on their hands. 
 
 [PreBuilt WallEth-v37 APK](https://github.com/mfsen10/walleth/blob/37-trezorbailout/assets/WALLETH-0.37-noGeth-noFirebase-forFDroid-online-release.apk)
-(right click download, or there's a download button on the linked page)
+(right click download, or there's a download button on the linked page.)
 
 
 Panhandling 
