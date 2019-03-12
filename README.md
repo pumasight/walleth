@@ -128,9 +128,12 @@ Bail out your coins!
 Too long; didn't read
 =======
 
-If you're not paranoid about where the code is coming from or just don't want to fuss with build environments, here's the exact APK build that worked for us. It's the one we compiled straight from v37 walleth/walleth/main branch with the process described above. This is verifiable, only difference is the code signature certificate it's signed with. Only reason I'm posting the app build here is because [F-Droid](https://f-droid.org/en/packages/org.walleth/) repo doesn't go back into WallEth's alpha days, and I don't feel like bothering the WallEth devs with this as I'm sure they have enough on their hands. 
+If you're not paranoid about where executable software came from or just don't want to fuss with build environments, here's the exact APK build that worked for us. It's the one we compiled straight from v37 walleth/walleth/main branch with the process described above. This is verifiable, only difference is the code signature certificate it's signed with, which is not publicly verifiable. [F-Droid](https://f-droid.org/en/packages/org.walleth/) repo doesn't go back into WallEth's alpha days, and I don't feel like bothering the WallEth devs with this as I'm sure they have enough on their hands. Here you go. 
 
 [PreBuilt WallEth-v37 APK](https://github.com/mfsen10/walleth/blob/37-trezorbailout/assets/WALLETH-0.37-noGeth-noFirebase-forFDroid-online-release.apk)
+
+SHA256: abdf17f0f07f474bca1b74486ede1ee7194bc863e0be9d9c1778ca5773ad181a *WALLETH-0.37-noGeth-noFirebase-forFDroid-online-release.apk
+
 (right click download, or there's a download button on the linked page.)
 
 Panhandling 
