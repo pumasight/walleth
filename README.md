@@ -108,13 +108,13 @@ If today's a good day, after a few minutes you'll get a toast message
 
 ```
 Generate Signed APK
-				APK(s) generated successfully:
-				Module 'app': **locate** or analyze the APK.
+APK(s) generated successfully:
+Module 'app': locate or analyze the APK.
 ```
 
-in the bottom-right that build completed. Click 'LOCATE' and your File Browser should open to the walleth-0.37/app directory. There will be a directory name `noGethNoFirebaseForFDroidOnline` there matching the build flavor you'd selected to build. Inside is an APK. 
+in the bottom-right that build completed. Click `LOCATE` and your File Browser should open to the walleth-0.37/app directory. There will be a directory name `noGethNoFirebaseForFDroidOnline` there matching the build flavor you'd selected to build. Inside is an APK. 
 
-### Install/Run
+### Install
 Send that APK to your Android device, preferably one running Oreo 8.0 or 8.1. Use bluetooth, Google drive, USB cable, whatever. Open your File Manager of choice and find the APK, click to install. If prompted that 'for security, this app is prevented from installing other apps' then you'll need to allow that.
 
 If you have a WallEth version installed already, you're going to have to uninstall that first. If you've got a bunch of precious WallEth configuration data, perhaps leverage TitaniumBackup if you're rooted. otherwise, move your coins/wallets around to get them away from your existing WallEth install, because the current instance must be destroyed to get this v37 version running.
@@ -125,6 +125,7 @@ If the installation fails, check
  - Did you Build a SIGNED APK? It needs to be signed. 
  - Had enough? Head to the [TL;DR](#too-long-didnt-read)
 
+### Connect
 Once you're set with v37 WallEth installed, connect your Trezor to your android with USB ([OTG](https://shop.trezor.io/product/android-phone-cable) cable, or leverage an [OTG adapter](https://www.monoprice.com/Product?p_id=9724). (adapter's male goes in the Android's port, the generic cable goes between the adapter and the trezor.)
 
 WallEth should recognize your Trezor, allow pin unlock, view wallets, and the value stored on them. If it's not reading the known value of the wallets, you might have to try a different WallEth version. This walkthrough only describes how v37 worked with firmware 1.6.1 
