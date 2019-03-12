@@ -127,13 +127,10 @@ If you're not paranoid about where the code is coming from or just don't want to
 [PreBuilt WallEth-v37 APK](https://github.com/mfsen10/walleth/blob/37-trezorbailout/assets/WALLETH-0.37-noGeth-noFirebase-forFDroid-online-release.apk)
 (right click download, or there's a download button on the linked page.)
 
-
 Panhandling 
 =======
 
-If I saved you some hairpulling and/or time, I'd very much appreciate some coin in lieu of cash/check/money order/cigarette cartons:
-
-My Ethereum ETH-ONLY address, thanks in advance: 
+If I saved you some hairpulling and/or time, I'd very much appreciate some coin in lieu of cash/check/money order/cigarette cartons. My Ethereum ETH-ONLY address, thanks in advance: 
 
 **0x4Ea515dDfc03D833fDC202393621A89AB77F1D87**
 
