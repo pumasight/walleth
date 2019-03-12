@@ -144,7 +144,7 @@ Too long; didn't read
 
 If you're not paranoid about where your personal banking software executables are from, or just don't want to fuss with build environments, here's the exact APK build that worked for us. It's the one we compiled straight from v37 walleth/walleth/main branch with the process described above. The code is verifiable, but painful. Only difference is the code signature certificate it's signed with, which is **not** publicly verifiable. [F-Droid](https://f-droid.org/en/packages/org.walleth/) repo doesn't go back into WallEth's alpha days, and I don't feel like bothering the WallEth devs with this as I'm sure they have enough on their hands. Here you go. 
 
-[PreBuilt WallEth-v37 APK](https://github.com/mfsen10/walleth/blob/37-trezorbailout/assets/WALLETH-0.37-noGeth-noFirebase-forFDroid-online-release.apk)
+[PreBuilt WallEth-v37 APK](https://github.com/mfsen10/walleth/raw/37-trezorbailout/assets/walleth-0.37-release.zip)
 
 SHA256: abdf17f0f07f474bca1b74486ede1ee7194bc863e0be9d9c1778ca5773ad181a *WALLETH-0.37-noGeth-noFirebase-forFDroid-online-release.apk
 
