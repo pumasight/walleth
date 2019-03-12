@@ -1,4 +1,4 @@
-Forked main v37 as a clear line of deprecation for Trezor firmware 1.6.1 support. 
+Forked main v37 as a clear line of deprecation for Trezor firmware 1.6.1 ETH transaction signing support. 
 
 [TL;DR](#too-long-didnt-read) quick fix towards the bottom. 
 
@@ -7,11 +7,12 @@ Backstory
 
 I recently bailed out a bunch of coin from a Trezor with the ill-fated firmware version 1.6.1. Best I can tell, Trezor forced a firmware update due to some fundamental changes in the cryptocurrency ecosystem and demands for support from their users, rendering the older firmwares incapable of properly signing Ethereum transactions. MyEtherWallet, wallet.trezor.io, and other common bridge tools were at some point between June 2018 and March 2019 rendered useless for the purpose of extracting financial value from their trezor, had they not performed the required update.
 
-A friend of mine did just that. A carpenter contractor type whom often found himself away from home on business, quietly HODLing away all he could. Like any of our fellows desirous of the death of the centralized banking systems, he decided a Trezor store was the best place for them. Trezor support, however, was not as kind as we would have hoped, only offering some potential solutions such as vintage.myetherwallet.com, which also now fails to properly sign the transactions like their main app. He needed to extract the coins to update the firmware, but so it seemed he also needed to update the firmware to extract the coin.
+A friend of mine did just that, a carpenter contractor type whom often found himself away from home on business. Quietly HODLing away all he could, like any of our fellows desirous of the death of the centralized banking systems he decided a Trezor store was the best place for them. He needed to extract the coins to update the firmware, but so it seemed he also needed to update the firmware to extract the coin.Trezor support was not as kind as we would have hoped, only offering some potential solutions such as vintage.myetherwallet.com, which also now fails to properly sign the transactions like their main app. 
 
-Thankfully, reddit threads proved helpful, with the golden average Internet citizen offering sincere help and direction, but much of it mirroring Trezor's lacklustre responses. Lots of focus on the trezorctl (python) project, and building MyEtherWallet locally, to no avail. To both Trezor and redditor's credit, they all had recommendations for WallEth. Fearing the worst with bugs in older versions potentially manhandling the wallets to oblivion, but also knowing the latest version was no longer compatible with firmware 1.6.1, we started digging through the commit changelog hoping for clues, and fixed around the point of Trezor model 1 firmware 1.6.1 release. 
+Thankfully, reddit threads proved helpful, with gilded Internet citizens offering sincere help and direction, but much of it mirroring Trezor's lacklustre responses. Lots of focus on the python-trezor (trezorctl) project or building MyEtherWallet locally, but these were dead ends for us. WallEth was recommended, but fearing the worst with bugs in older versions potentially manhandling the wallets to oblivion, and  also knowing the latest version was no longer compatible with firmware 1.6.1, we started digging through the commit changelog hoping for clues, and fixed around the point of Trezor model 1 firmware 1.6.1 release. 
 
-To save anyone else out there with ERC20 wallets hopelessly stuck on an old Trezor firmware, I present to you --- what worked for us. We gratefully stand on the shoulders of the Trezor and reddit communities and are happy to let you know there is a (probably time-sensitive) escape from your financial woes. WallEth version 0.37 -released 20180613 -build flavor no-GEth No-Analytics -For-FDroid -OnlineRelease works!
+To save anyone else out there with ERC20 wallets hopelessly stuck on an old Trezor firmware, I present to you... what worked for us. We gratefully stand on the shoulders of the Trezor and reddit communities and are happy to let you know there is a (probably time-sensitive) escape from your financial woes. WallEth version 0.37 -released 2018 Jun 13 -build flavor no-GEth No-Analytics -For-FDroid -OnlineRelease works!
+
 
 Build Environment 
 =======
@@ -33,6 +34,7 @@ should work for whatever base platform, Windows/Linux/Mac, though YMMV.
 Simplify the above installs by leveraging the https://Chocolatey.org platform. They have their simple installation methods posted there.
 
 Once choco is a thing on your machine,  complete the above installations with a one-liner:
+
 ```choco install -y androidstudio jdk8 jre8``` 
 
 - probably worth a reboot at this time just to start fresh, as environment variables get changed. 
@@ -65,6 +67,7 @@ NoGEth - NoFirebase - ForFDroid - OnlineRelase
  - We can't use the Offline version because it won't connect to the mainnet, where we need our blockchain ledger updates written so our coins actually go somewhere.
  - FDroid (FOSS android app store, be sure to send Richard Stallman a coin donation when you recover!) is the only static variable in all the build flavors because at this stage of WallEth development, it was not ready for play store, and we shouldn't/wouldn't be able to sign the code for Play Store inclusion anyways.  
 
+
 Build Time!
 =======
 
@@ -91,21 +94,12 @@ Once you're set with v37 WallEth installed, connect your Trezor to your android 
 
 WallEth should recognize your Trezor, allow pin unlock, view wallets, and the value stored on them. If it's not reading the known value of the wallets, you might have to try a different WallEth version. This walkthrough only describes how v37 worked with firmware 1.6.1 
 
-Too long; didn't read
-=======
-
-If you're not paranoid about where the code is coming from, or just don't want to fuss with build environments, here's a link to the build that worked for us. It's a build we made straight from v37 walleth/walleth/main branch. This is verifiable, only difference is the code signature certificate it's signed with. 
-
-[PreBuilt WallEth-v37 APK](https://github.com/mfsen10/walleth/blob/37-trezorbailout/assets/WALLETH-0.37-noGeth-noFirebase-forFDroid-online-release.apk)
-(right click download, or there's a download button on the linked page)
 
 Bail out your coins!
 =====
 
 - Send your coin to an address that's explicitly meant for that coin, and one you control! Binance, BitStamp, CoinBase are all decent intermediaries until you've got your Trezor updated to the latest firmware and ready to receive the transfers back onto it. 
-
 - I'd recommend sending VERY SMALL amounts of coin at first, as a few test cases, wait for the full node validation to complete, and move on from there. Even if all the software you're running is perfectly tuned, after all's said and done the Internets can corrupt or drop data transfers sometimes.
-
 - **BE SURE to uninstall version 37** or whatever other ancient alpha build you're working with once you've recovered your gear. It's strongly urged to keep up with the latest version for compatibility and security purposes. 
 
 
@@ -114,7 +108,7 @@ Panhandling
 
 If I saved you some hairpulling and/or time, I'd gladly accept some coin in lieu of cash/check/money order/cigarette cartons:
 
-My Ethereum ETH-ONLY address: 
+My Ethereum ETH-ONLY address, thanks in advance: 
 
 **0x4Ea515dDfc03D833fDC202393621A89AB77F1D87**
 
@@ -123,7 +117,16 @@ My Ethereum ETH-ONLY address:
 **Be sure to tip the WallEth devs as well**, their addresses are listed within the app. 
 
 
-Standard WallΞTH README below.
+Too long; didn't read
+=======
+
+If you're not paranoid about where the code is coming from, or just don't want to fuss with build environments, here's a link to the build that worked for us. It's a build we compiled straight from v37 walleth/walleth/main branch with the process described above. This is verifiable, only difference is the code signature certificate it's signed with. Only reason I'm posting here is because FDroid repo doesn't go back into WallEth's pre-alpha days, and I don't feel like bothering the WallEth devs with this as they have enough on their hands. 
+
+[PreBuilt WallEth-v37 APK](https://github.com/mfsen10/walleth/blob/37-trezorbailout/assets/WALLETH-0.37-noGeth-noFirebase-forFDroid-online-release.apk)
+(right click download, or there's a download button on the linked page)
+
+
+Standard WallΞTH README follows.
 =======
 
 [![on Google Play](https://ligi.de/img/play_badge.png)](https://play.google.com/store/apps/details?id=org.walleth)
