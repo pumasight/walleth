@@ -1,6 +1,6 @@
 Forked main v37 as a clear line of deprecation for Trezor firmware 1.6.1 support. 
 
-TL;DR quick fix towards the bottom. 
+[TL;DR](#too-long-didnt-read) quick fix towards the bottom. 
 
 Backstory 
 =======
@@ -13,14 +13,13 @@ Thankfully, reddit threads proved helpful, with the golden average Internet citi
 
 To save anyone else out there with ERC20 wallets hopelessly stuck on an old Trezor firmware, I present to you --- what worked for us. We gratefully stand on the shoulders of the Trezor and reddit communities and are happy to let you know there is a (probably time-sensitive) escape from your financial woes. WallEth version 0.37 -released 20180613 -build flavor no-GEth No-Analytics -For-FDroid -OnlineRelease works!
 
-Bailout instructions 
+Build Environment 
 =======
 
-Build environment:
-Android Studio 3.3.2 Build #AI-182.5107.16.33.5314842, built on February 15, 2019
-JRE: 1.8.0_152-release-1248-b01 amd64
-JVM: OpenJDK 64-Bit Server VM by JetBrains s.r.o
-Windows 10 10.0
+- Android Studio 3.3.2 Build #AI-182.5107.16.33.5314842, built on February 15, 2019
+- JRE: 1.8.0_152-release-1248-b01 amd64
+- JVM: OpenJDK 64-Bit Server VM by JetBrains s.r.o
+- Windows 10 10.0
 
 Bear with me as I am no more than an amateur developer, here we go:
 
@@ -50,6 +49,7 @@ This gits that framework for building this Internet-ancient WallEth.
 - if you grabbed the zip/tar file, unzip/tar the archive somewhere that can host a couple Gig's worth of disk space - the build dependencies that get auto-downloaded by Studio in during compiling are sprawling. 
 
 - Back in android studio, 
+
 `File` > `New` > `Import Project` 
 
 Direct it towards the walleth-0.37 directory unzipped in the last step. Studio will start setting itself up to work with the codebase. 
