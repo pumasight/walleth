@@ -31,7 +31,9 @@ Bear with me as I am no more than an amateur developer, here we go:
 
 should work for whatever base platform, Windows/Linux/Mac, though YMMV. 
 
-Simplify the above installs by leveraging the https://Chocolatey.org platform. They have their simple installation methods posted there.
+I suggest simplifying the above installs by leveraging the Chocolatey![Chocolatey Logo](https://cdn.rawgit.com/chocolatey/choco/14a627932c78c8baaba6bef5f749ebfa1957d28d/docs/logo/chocolateyicon.gif "Chocolatey") platform. They have their simple installation methods posted there.
+
+
 
 Once choco is a thing on your machine,  complete the above installations with a one-liner:
 
@@ -112,7 +114,7 @@ My Ethereum ETH-ONLY address, thanks in advance:
 
 **0x4Ea515dDfc03D833fDC202393621A89AB77F1D87**
 
-[![TrezorBailout Walkthrough author's addess](https://github.com/mfsen10/walleth/blob/37-trezorbailout/assets/eth-addr-qr.png)
+![0x4Ea515dDfc03D833fDC202393621A89AB77F1D87](https://github.com/mfsen10/walleth/blob/37-trezorbailout/assets/eth-addr-qr.png)
 
 **Be sure to tip the WallEth devs as well**, their addresses are listed within the app. 
 
