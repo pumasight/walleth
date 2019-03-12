@@ -84,10 +84,12 @@ Direct it towards the walleth-0.37 directory unzipped in the last step. Studio w
 - on the  left-hand border of Studio there's a tab 'Build Versions' that presents a dropdown menu.
 - Select `NoGEth - NoFirebase - ForFDroid - Online -Release`
 
+#### Why this build?
+ - v0.37 was found to work. Tested others, but no luck for 1.6.1. Can't vouch for what changed in the WallEth code, or if any other version might work, but this one did for us. 
  - [Geth](https://github.com/ethereum/go-ethereum/wiki/Mining) is an extension for Walleth that lets us run a full ETH node - awesome, but unncessary for this purpose. 
- - [FireBase](https://developers.google.com/training/firebase/) is Google's analytics platform, again unnecessary. 
- - `Online`  because `offline` won't connect to the ETH mainnet, where we need our blockchain ledger updates written so our real coins go to real addresses
- - `Release` : We don't need the Debug version, we're trying to run lean for this purpose alone.
+ - [FireBase](https://developers.google.com/training/firebase/) is Google's analytics platform, again unnecessary, and possibly sketchy. 
+ - `Online`  because I'm pretty sure `offline` won't connect to the ETH mainnet, where we need our blockchain ledger updates written so our real coins go to real addresses
+ - `Release` : We don't need the Debug version, we're trying to run lean for this Trezor recovery purpose alone.
  - [F-Droid](https://f-droid.org) is the only static variable in all the build flavors because at this stage of WallEth development, it was not ready for play store, and we shouldn't/wouldn't be able to sign the code for Play Store inclusion anyways. (FOSS android app store, be sure to send [Richard Stallman](https://my.fsf.org/donate) some coin once you recover yours! litecoin:LPttYC3GoXNrBqGfLT7tTbNHm8SiUpBwYz bitcoin:1PC9aZC4hNX2rmmrt7uHTfYAS3hRbph4UN)
 
 
