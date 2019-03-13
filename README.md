@@ -128,7 +128,7 @@ If the installation fails, check
 - Did you Build a SIGNED APK? It needs to be signed. Had enough? Head to the [TL;DR](#too-long-didnt-read)
 
 ### Connect
-Once you're set with v37 WallΞTH installed, connect your Trezor to your android with USB ([OTG](https://shop.trezor.io/product/android-phone-cable) cable, or leverage an [OTG adapter](https://www.monoprice.com/Product?p_id=9724). (adapter's male goes in the Android's port, the generic cable goes between the adapter and the Trezor.)
+Once you're set with v37 WallΞTH installed, connect your Trezor to your android with USB ([OTG](https://shop.trezor.io/product/android-phone-cable) cable, or leverage an [OTG adapter](https://www.monoprice.com/Product?p_id=9724). (adapter's male goes in the Android's port, the generic cable goes between the adapter and the Trezor.)  In either case, you'll definitely want to be doing this connection on a sturdy workbench where the cable won't be jostled easily.
 
 WallΞTH should recognize your Trezor, allow pin unlock, view wallets, and the value stored on them. If it's not reading the known value of the wallets, you might have to try a different WallΞTH version. This walkthrough only describes how v37 worked with firmware 1.6.1 
 
@@ -136,7 +136,7 @@ WallΞTH should recognize your Trezor, allow pin unlock, view wallets, and the v
 Bail out your coins!
 =====
 
-- Send your coin to an address that's explicitly meant for that coin, and one you control! 
+Send your coin to a receiver address that's explicitly meant for that coin, and one you control! 
 - [Binance](https://www.binance.com/en) 
 - [BitStamp](https://www.bitstamp.net/)
 - [CoinBase](https://www.coinbase.com/) 
@@ -144,7 +144,8 @@ Bail out your coins!
 are all fine intermediary establishments to park your coins until your Trezor updated to the latest firmware, configured and ready to receive the transfers back onto it. 
 
 - I'd recommend sending VERY SMALL amounts of coin at first as a few test cases. Watch for the [node validations](https://etherscan.io/) to fully verify the transaction, and move forward from there. Even if all the software you're running is perfectly tuned, after all's said and done the Internets can corrupt or drop data transfers sometimes.
-- **BE SURE to uninstall version 37** or whatever other ancient alpha build you're working with once you've recovered your gear. It's strongly urged to keep up with the [latest version](https://play.google.com/store/apps/details?id=org.walleth) for compatibility and security purposes. 
+- Make sure you're conducting your transactions on the mainnet. The Ropsten/Morden/Rinkeby networks aren't going to do you any good, and _you could potentially lose your money if you send to a testnet address from the mainnet_.  Just select mainnet from the left-nav menu.
+- **BE SURE to uninstall version 37** or whatever other ancient alpha build you're working with once you've recovered your gear. It's strongly urged to keep up with the latest version from [F-Droid](https://f-droid.org/en/packages/org.walleth/) or [Play](https://play.google.com/store/apps/details?id=org.walleth) for compatibility and security purposes. 
 
 
 Too long; didn't read
