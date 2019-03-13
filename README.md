@@ -2,7 +2,7 @@
 
 This repo is a forked WallΞTH v0.37 from [main](https://raw.githubusercontent.com/walleth/walleth) purely as a clear line of deprecation for Trezor firmware 1.6.1 ETH transaction signing support. 
 
-[TL;DR](#too-long-didn’t-read) quick-fix towards the bottom. 
+[TL;DR](#too-long-didnt-read) quick-fix towards the bottom. 
 
 Backstory 
 =======
@@ -30,7 +30,7 @@ A friend of mine found himself stuck in the middle of this, a carpenter contract
 
 To save anyone else out there with ERC* token wallets hopelessly stuck on an old Trezor firmware, I present to you... what worked for us. We gratefully stand on the shoulders of the Trezor and reddit communities and are happy to let you know there is a (probably time-sensitive) escape from your financial woes.  
 
-I urge you to build this for yourself to cut me out as one of numerous middlemen between you and your coin, but the [TL;DR](#too-long-didn’t-read) section links a ready-to-run WallΞTH android app. This walkthrough's target audience is intended for pure beginners, but time is of the essence because the Ethereum ecosystem could change at some point and render this fix, and your wallets, into /dev/null (the void of nothingness.) So on we go:
+I urge you to build this for yourself to cut me out as one of numerous middlemen between you and your coin, but the [TL;DR](#too-long-didnt-read) section links a ready-to-run WallΞTH android app. This walkthrough's target audience is intended for pure beginners, but time is of the essence because the Ethereum ecosystem could change at some point and render this fix, and your wallets, into /dev/null (the void of nothingness.) So on we go:
 
 Build Environment 
 =======
@@ -125,7 +125,7 @@ If you have a WallΞTH version installed already, you're going to have to uninst
 If the installation fails, check
 - Did you tell `Android Settings` to allow your `File Manager` app to install other apps?
 - Did you back up your wallets and uninstall any current WallΞTH install?
-- Did you Build a SIGNED APK? It needs to be signed. Had enough? Head to the [TL;DR](#too-long-didn’t-read)
+- Did you Build a SIGNED APK? It needs to be signed. Had enough? Head to the [TL;DR](#too-long-didnt-read)
 
 ### Connect
 Once you're set with v37 WallΞTH installed, connect your Trezor to your android with USB ([OTG](https://shop.trezor.io/product/android-phone-cable) cable, or leverage an [OTG adapter](https://www.monoprice.com/Product?p_id=9724). (adapter's male goes in the Android's port, the generic cable goes between the adapter and the Trezor.)
