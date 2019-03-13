@@ -1,8 +1,8 @@
 # ERC Hardware (Trezor) Wallet Recovery via [WallΞTH](https://raw.githubusercontent.com/walleth/walleth/) [![WallΞTH](https://raw.githubusercontent.com/walleth/walleth/master/app/src/main/res/mipmap-xhdpi/ic_launcher.png)](https://walleth.org)
 
-Forked WallΞTH from main v37 only as a clear line of deprecation for Trezor firmware 1.6.1 ETH transaction signing support. 
+This repo is a forked WallΞTH v0.37 from [main](https://raw.githubusercontent.com/walleth/walleth) purely as a clear line of deprecation for Trezor firmware 1.6.1 ETH transaction signing support. 
 
-[TL;DR](#too-long-didnt-read) quick fix towards the bottom. 
+[TL;DR](#too-long-didn’t-read) quick-fix towards the bottom. 
 
 Backstory 
 =======
@@ -13,9 +13,9 @@ I recently bailed out a bunch of coin from a Trezor with the ill-fated firmware 
 - [Trezor Wallet](https://wallet.trezor.io)
 - [MetaMask](https://metamask.io/)
 
-and other common bridge tools were rendered useless for the purpose of extracting real money from  trezor <=1.6.3 firmwares, had Trezor customers not performed the firmware update. 
+and other common bridge tools were rendered useless for the purpose of extracting real money from  Trezor <=1.6.3 firmwares, had Trezor customers not performed the firmware update. 
 
-A friend of mine found themself stuck in the middle of this, a carpenter contractor type whom often found himself away from home on business. Quietly HODLing away all he could, like any of our fellows desirous of the death of the centralized banking systems he decided a Trezor store was the best place for them. He needed to extract the coins to update the firmware, but so it seemed he also needed to update the firmware to extract the coin. Trezor support and gilded redditors offered some potential solutions:
+A friend of mine found himself stuck in the middle of this, a carpenter contractor type whom often found himself away from home on business. Quietly HODLing away all he could, like any of our fellows desirous of the death of the centralized banking systems he decided a Trezor store was the best place for them. He needed to extract the coins to update the firmware, but so it seemed he also needed to update the firmware to extract the coin. Trezor support and gilded redditors offered some potential solutions:
 
 - [Vintage MyEtherWallet](https://vintage.myetherwallet.com), which also now fails to properly sign ETH transactions with the old Trezor firmware 1.6.1   
 - [MyEtherWallet](https://github.com/MyEtherWallet/MyEtherWallet) doing an even more vintage version local build/install, this seemed like a much more extensive project than I was willing to commit to
@@ -25,10 +25,10 @@ A friend of mine found themself stuck in the middle of this, a carpenter contrac
 - [WallΞTH](https://github.com/walleth/walleth/) Fearing the worst with bugs in older versions potentially manhandling the wallets to oblivion, and also finding the latest version was no longer compatible with firmware 1.6.1, we started digging through the commit changelog hoping for clues, and fixed efforts around the release dates of the Trezor model 1 firmware 1.6.1 release. 
  
 
-# Working Solution: [WallEth version 0.37](https://github.com/walleth/walleth/releases/tag/0.37) ❤ Trezor 1.6.1 
-- Released 2018 Jun 13 (build flavor no-GEth No-Analytics -For-FDroid -OnlineRelease)
+# Working Solution: [WallΞTH version 0.37](https://github.com/walleth/walleth/releases/tag/0.37) ❤ Trezor 1.6.1 
+- Released 2018 Jun 13 (build flavor no-GEth No-Firebase -For-FDroid -Online -Release)
 
-To save anyone else out there with ERC* token wallets hopelessly stuck on an old Trezor firmware, I present to you... what worked for us. We gratefully stand on the shoulders of the Trezor and reddit communities and are happy to let you know there is a (probably time-sensitive) escape from your financial woes. Again, [TL;DR](#too-long-didnt-read) pre-built WallΞTH is below. 
+To save anyone else out there with ERC* token wallets hopelessly stuck on an old Trezor firmware, I present to you... what worked for us. We gratefully stand on the shoulders of the Trezor and reddit communities and are happy to let you know there is a (probably time-sensitive) escape from your financial woes. Again, [TL;DR](#too-long-didn’t-read) pre-built WallΞTH is below. 
 
 I urge you to build yourself to cut out me as a middleman between you and your coin. This walkthrough's target audience is intended for pure beginners. On we go:
 
@@ -43,7 +43,7 @@ Build Environment
 
 ### Install
 - [Android Studio](https://developer.android.com/studio/)
-- [Java RunTime Environment](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (JRE, traditional end-user Java)
+- [Java Runtime Environment](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (JRE, traditional end-user Java)
 - [Java SE](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (JDK)
 
 You can automate the above installs on Windows by leveraging the lovely [Chocolatey](https://chocolatey.org/install)[![Chocolatey Logo](https://cdn.rawgit.com/chocolatey/choco/14a627932c78c8baaba6bef5f749ebfa1957d28d/docs/logo/chocolateyicon.gif "Chocolatey")](https://chocolatey.org/install) platform. They have their simple installation methods posted there. This walkthrough describes Windows building. Should work for whatever base platform, Windows/Linux/Mac, but YMMV.
@@ -78,7 +78,7 @@ This gits the framework for building this Internet-ancient WallΞTH 37.
 
 Direct it towards the walleth-0.37 directory unzipped in the last step. Studio will start setting itself up to work with the codebase. 
 
-- Android Studio will recommend upgrding the Gradle install. I didn't, and since we're compiling legacy code, it's probably a bad idea. `Don't Remind me Again`
+- Android Studio will recommend upgrading the Gradle install. I didn't, and since we're compiling legacy code, it's probably a bad idea. `Don't Remind me Again`
 
 - Wait for the initial Gradle Build to complete. 
 - on the  left-hand border of Studio there's a tab 'Build Versions' that presents a dropdown menu.
@@ -86,8 +86,8 @@ Direct it towards the walleth-0.37 directory unzipped in the last step. Studio w
 
 #### Why this build?
  - v0.37 was found to work. Tested others, but no luck for 1.6.1. Can't vouch for what changed in the WallΞTH code, or if any other version might work, but this one did for us. 
- - [Geth](https://github.com/ethereum/go-ethereum/wiki/Mining) is an extension for WallΞTH that lets us run a full ETH node - awesome, but unncessary for this purpose. 
- - [FireBase](https://developers.google.com/training/firebase/) is Google's analytics platform, again unnecessary, and possibly sketchy. 
+ - [Geth](https://github.com/ethereum/go-ethereum/wiki/Mining) is an extension for WallΞTH that lets us run a full ETH node - awesome, but unnecessary for this purpose. 
+ - [Firebase](https://developers.google.com/training/firebase/) is Google's analytics platform, again unnecessary, and possibly sketchy. 
  - `Online`  because I'm pretty sure `offline` won't connect to the ETH mainnet, where we need our blockchain ledger updates written so our real coins go to real addresses
  - `Release` : We don't need the Debug version, we're trying to run lean for this Trezor recovery purpose alone.
  - [F-Droid](https://f-droid.org) is the only static variable in all the build flavors because at this stage of WallΞTH development, it was not ready for play store, and we shouldn't/wouldn't be able to sign the code for Play Store inclusion anyways. (FOSS android app store, be sure to send [Richard Stallman](https://my.fsf.org/donate) some coin once you recover yours! litecoin:LPttYC3GoXNrBqGfLT7tTbNHm8SiUpBwYz bitcoin:1PC9aZC4hNX2rmmrt7uHTfYAS3hRbph4UN)
@@ -117,17 +117,17 @@ Module 'app': locate or analyze the APK.
 in the bottom-right that build completed. Click `LOCATE` and your File Browser should open to the walleth-0.37/app directory. There will be a directory name `noGethNoFirebaseForFDroidOnline` there matching the build flavor you'd selected to build. Inside is an APK. 
 
 ### Install
-Send that APK to your Android device, preferably one running Oreo 8.0 or 8.1. Use bluetooth, Google drive, USB cable, whatever. Open your File Manager of choice and find the APK, click to install. If prompted that 'for security, this app is prevented from installing other apps' then you'll need to allow that.
+Send that APK to your Android device, preferably one running Oreo 8.0 or 8.1. Use Bluetooth, Google drive, USB cable, whatever. Open your File Manager of choice and find the APK, click to install. If prompted that 'for security, this app is prevented from installing other apps' then you'll need to allow that.
 
 If you have a WallΞTH version installed already, you're going to have to uninstall that first. If you've got a bunch of precious WallΞTH configuration data, perhaps leverage [TitaniumBackup](https://www.titaniumtrack.com/titanium-backup.html) if you're running rooted Android. Otherwise, move your coins/wallets around to get them away from your existing WallΞTH install, because the current instance must be destroyed to get this v37 version running.
 
 If the installation fails, check
 - Did you tell `Android Settings` to allow your `File Manager` app to install other apps?
 - Did you back up your wallets and uninstall any current WallΞTH install?
-- Did you Build a SIGNED APK? It needs to be signed. Had enough? Head to the [TL;DR](#too-long-didnt-read)
+- Did you Build a SIGNED APK? It needs to be signed. Had enough? Head to the [TL;DR](#too-long-didn’t-read)
 
 ### Connect
-Once you're set with v37 WallΞTH installed, connect your Trezor to your android with USB ([OTG](https://shop.trezor.io/product/android-phone-cable) cable, or leverage an [OTG adapter](https://www.monoprice.com/Product?p_id=9724). (adapter's male goes in the Android's port, the generic cable goes between the adapter and the trezor.)
+Once you're set with v37 WallΞTH installed, connect your Trezor to your android with USB ([OTG](https://shop.trezor.io/product/android-phone-cable) cable, or leverage an [OTG adapter](https://www.monoprice.com/Product?p_id=9724). (adapter's male goes in the Android's port, the generic cable goes between the adapter and the Trezor.)
 
 WallΞTH should recognize your Trezor, allow pin unlock, view wallets, and the value stored on them. If it's not reading the known value of the wallets, you might have to try a different WallΞTH version. This walkthrough only describes how v37 worked with firmware 1.6.1 
 
@@ -135,22 +135,31 @@ WallΞTH should recognize your Trezor, allow pin unlock, view wallets, and the v
 Bail out your coins!
 =====
 
-- Send your coin to an address that's explicitly meant for that coin, and one you control! Binance, BitStamp, CoinBase are all decent intermediaries until you've got your Trezor updated to the latest firmware and ready to receive the transfers back onto it. 
-- I'd recommend sending VERY SMALL amounts of coin at first as a few test cases. Wait for the nodes validation to fully complete, and move forward from there. Even if all the software you're running is perfectly tuned, after all's said and done the Internets can corrupt or drop data transfers sometimes.
-- **BE SURE to uninstall version 37** or whatever other ancient alpha build you're working with once you've recovered your gear. It's strongly urged to keep up with the latest version for compatibility and security purposes. 
+- Send your coin to an address that's explicitly meant for that coin, and one you control! 
+- [Binance](https://www.binance.com/en) 
+- [BitStamp](https://www.bitstamp.net/)
+- [CoinBase](https://www.coinbase.com/) 
+
+are all fine intermediary establishments to park your coins until your Trezor updated to the latest firmware, configured and ready to receive the transfers back onto it. 
+
+- I'd recommend sending VERY SMALL amounts of coin at first as a few test cases. Watch for the [node validations](https://etherscan.io/) to fully verify the transaction, and move forward from there. Even if all the software you're running is perfectly tuned, after all's said and done the Internets can corrupt or drop data transfers sometimes.
+- **BE SURE to uninstall version 37** or whatever other ancient alpha build you're working with once you've recovered your gear. It's strongly urged to keep up with the [latest version](https://play.google.com/store/apps/details?id=org.walleth) for compatibility and security purposes. 
 
 
 Too long; didn't read
 =======
 
-If you're not paranoid about where your personal banking software executables are from, or just don't want to fuss with build environments, here's the exact APK build that worked for us. It's the one we compiled straight from v37 walleth/walleth/main branch with the process described above. The code is verifiable, but painful. Only difference is the code signature certificate it's signed with, which is **not** publicly verifiable. [F-Droid](https://f-droid.org/en/packages/org.walleth/) repo doesn't go back into WallEth's alpha days, and I don't feel like bothering the WallΞTH devs with this as I'm sure they have enough on their hands. Here you go. 
+If you're not paranoid about where your personal banking software executables are from, or just don't want to fuss with build environments, here's the exact APK build that worked for us. It's the one we compiled straight from v37 walleth/walleth/main branch with the process described above. 
+- The code is technically verifiable as genuine, but would be painful. [VirusTotal 3rd party validation – 58 Antivirus engines say it’s not malware](https://www.virustotal.com/#/file/abdf17f0f07f474bca1b74486ede1ee7194bc863e0be9d9c1778ca5773ad181a/detection)
+- If you trust me, random nerd on the Internet: The only difference between the official builds and this one is the code signature certificate I signed it with, which is **not** publicly verifiable (No trusted 3rd party can vouch for my identify via that signature.) 
+- [F-Droid’s](https://f-droid.org/en/packages/org.walleth/) WallΞTH repo doesn't go back into this unstable/unsupported alpha version territory
+- I don't feel like bothering the WallΞTH developers with this as I'm sure they have enough on their hands. 
+- I am not the author of this app, and this software is offered under [GPL License](https://www.gnu.org/licenses/gpl.html): as is, no warranty or claims, if it eats your cat or breaks your alarm clock and you get fired I am not responsible. 
 
-[PreBuilt WallΞTH-v37 APK](https://github.com/mfsen10/walleth/raw/37-trezorbailout/assets/walleth-0.37-release.zip) (right click download, or there's a download button on the linked page.)
+Have at it cowboy: 
+[Prebuilt WallΞTH-v37 APK](https://github.com/mfsen10/walleth/raw/37-trezorbailout/assets/walleth-0.37-release.zip) (right click download, or there's a download button on the linked page.)
 
 SHA256: abdf17f0f07f474bca1b74486ede1ee7194bc863e0be9d9c1778ca5773ad181a *WALLETH-0.37-noGeth-noFirebase-forFDroid-online-release.apk
-
-[VirusTotal 3rd party validation - not malware](https://www.virustotal.com/#/file/abdf17f0f07f474bca1b74486ede1ee7194bc863e0be9d9c1778ca5773ad181a/detection)
-
 
 Panhandling 
 =======
@@ -161,11 +170,11 @@ If I saved you some hairpulling and/or time, I'd very much appreciate some coin 
 
 ![0x4Ea515dDfc03D833fDC202393621A89AB77F1D87](https://github.com/mfsen10/walleth/blob/37-trezorbailout/assets/eth-addr-qr.png)
 
-**Be sure to tip the WallEth devs as well**, their addresses are listed within the app. 
+**Be sure to tip the WallΞTH developers as well** _once you’re back on the [latest WallΞTH version](https://play.google.com/store/apps/details?id=org.walleth)_. Their coin addresses are listed within the app. 
 
 
 
-Standard WallΞTH README follows:
+Standard WallΞTH project README follows:
 =======
 
 [![on Google Play](https://ligi.de/img/play_badge.png)](https://play.google.com/store/apps/details?id=org.walleth)
