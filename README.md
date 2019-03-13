@@ -28,13 +28,14 @@ A friend of mine found himself stuck in the middle of this, a carpenter contract
 # Working Solution: [WallΞTH version 0.37](https://github.com/walleth/walleth/releases/tag/0.37) ❤ Trezor 1.6.1 
 - Released 2018 Jun 13 (build flavor no-GEth No-Firebase -For-FDroid -Online -Release)
 
-To save anyone else out there with ERC* token wallets hopelessly stuck on an old Trezor firmware, I present to you... what worked for us. We gratefully stand on the shoulders of the Trezor and reddit communities and are happy to let you know there is a (probably time-sensitive) escape from your financial woes. Again, [TL;DR](#too-long-didn’t-read) pre-built WallΞTH is below. 
+To save anyone else out there with ERC* token wallets hopelessly stuck on an old Trezor firmware, I present to you... what worked for us. We gratefully stand on the shoulders of the Trezor and reddit communities and are happy to let you know there is a (probably time-sensitive) escape from your financial woes.  
 
-I urge you to build yourself to cut out me as a middleman between you and your coin. This walkthrough's target audience is intended for pure beginners. On we go:
+I urge you to build this for yourself to cut me out as one of numerous middlemen between you and your coin, but the [TL;DR](#too-long-didn’t-read) section links a ready-to-run WallΞTH android app. This walkthrough's target audience is intended for pure beginners, but time is of the essence because the Ethereum ecosystem could change at some point and render this fix, and your wallets, into /dev/null (the void of nothingness.) So on we go:
 
 Build Environment 
 =======
 
+Stats for nerds:
 - Android Studio 3.3.2 Build #AI-182.5107.16.33.5314842, built on February 15, 2019
 - JRE: 1.8.0_152-release-1248-b01 amd64
 - JVM: OpenJDK 64-Bit Server VM by JetBrains s.r.o
